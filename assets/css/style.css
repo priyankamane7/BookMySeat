@@ -1,0 +1,235 @@
+/* Custom CSS for the seat map - Refined for better aesthetics */
+.seat {
+    width: 28px;  /* Slightly larger seats */
+    height: 28px;
+    margin: 4px;      /* Reduced margin */
+    border-radius: 6px;  /* More rounded seats */
+    background-color: #f0f0f0;  /* Lighter default color */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    display: flex;          /* For centering the seat letter */
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;    /* Seat letter size */
+    color: #555;          /* Darker seat letter color */
+}
+
+.seat:hover {
+    background-color: #d4d4d4;  /* Slightly darker hover */
+}
+
+.seat.available {
+    background-color: #86ef7d;  /* Brighter green for available */
+    color: #0c3001;
+}
+
+.seat.available:hover {
+    background-color: #6ee7b7;  /* Lighter hover for available */
+}
+
+.seat.occupied {
+    background-color: #f87171;  /* Brighter red for occupied */
+    color: #ffffff;
+}
+
+.seat.selected {
+    background-color: #3b82f6;  /* Blue for selected */
+    color: #ffffff;
+}
+
+.row-label {
+    width: 24px;      /* Adjusted row label width */
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;   /* Increased margin */
+    font-size: 0.9rem;    /* Slightly larger row label */
+    color: #777;          /* Darker row label color */
+}
+
+.seat-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Center the whole map */
+    padding: 16px;          /* Added padding to the map container */
+    border-radius: 12px;  /* Rounded corners for the map */
+    background-color: #ffffff;  /* White background for the map */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Slightly stronger shadow */
+    margin-bottom: 20px;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;  /* Center seats in each row */
+    align-items: center;      /* Vertically align items, useful for row labels */
+    margin-bottom: 4px;    /* Reduced row margin */
+}
+
+#selected-seats {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1rem;      /* Slightly larger selected seats text */
+    color: #333;            /* Darker text color */
+}
+
+#selected-seats span {
+    font-weight: 600;    /* Make selected seat numbers bold */
+    color: #3b82f6;      /* Blue color for selected seat numbers */
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Center controls */
+    margin-top: 20px;
+}
+
+.control-button {
+    padding: 10px 20px;
+    margin: 8px 0;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);  /* Subtle shadow */
+}
+
+.control-button:hover {
+    background-color: #e0e0e0;
+}
+
+.control-button.primary {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #2563eb;
+}
+
+.control-button.primary:hover {
+    background-color: #2563eb;
+}
+
+#zoom-controls {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#zoom-controls button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);  /* Subtle shadow */
+}
+
+#zoom-controls button:hover {
+    background-color: #e0e0e0;
+}
+
+#reset-zoom {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);  /* Subtle shadow */
+}
+
+#reset-zoom:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) { /* Medium screens and below (tablets) */
+    .seat {
+        width: 24px;  /* Slightly smaller seats on tablets */
+        height: 24px;
+        margin: 3px;      /* Reduced margin on tablets */
+    }
+
+    .row-label {
+        width: 20px;      /* Adjusted row label width for tablets */
+        height: 20px;
+        font-size: 0.8rem;  /* Smaller row labels on tablets */
+        margin-right: 6px;
+    }
+
+    .seat-map {
+        padding: 12px;      /* Slightly reduced padding on tablets */
+    }
+
+    .control-button {
+        font-size: 0.9rem;  /* Smaller buttons on tablets */
+        padding: 8px 16px;
+    }
+
+    #zoom-controls button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    #reset-zoom {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 640px) { /* Small screens and below (phones) */
+    .seat {
+        width: 36px;  /* Larger seats on phones */
+        height: 36px;
+        margin: 6px;      /* Increased margin on phones */
+    }
+
+    .row-label {
+        width: 32px;      /* Adjusted row label width for phones */
+        height: 32px;
+        font-size: 1rem;  /* Larger row labels on phones */
+        margin-right: 10px;
+    }
+
+    .seat-map {
+        padding: 16px;      /* Increased padding on phones */
+    }
+
+    .seat-row {
+        margin-bottom: 8px;  /* Increased row margin on phones */
+    }
+
+    .control-button {
+        font-size: 1.1rem;  /* Larger buttons on phones */
+        padding: 12px 24px;
+        margin: 10px 0;
+    }
+
+    #zoom-controls {
+        flex-direction: column;  /* Stack zoom controls on phones */
+        gap: 12px;
+    }
+
+    #zoom-controls button {
+        font-size: 1.1rem;  /* Larger zoom buttons on phones */
+        padding: 10px 20px;
+    }
+
+    #reset-zoom {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+    }
+
+    #selected-seats {
+        font-size: 1.2rem;  /* Larger selected seats text on phones */
+    }
+}
