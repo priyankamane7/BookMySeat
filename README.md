@@ -41,3 +41,5 @@ This web application allows users to select and book seats in a venue using an i
 * `styles.css`: Contains CSS styling.
 * `script.js`: Contains JavaScript logic.
 
+  
+
